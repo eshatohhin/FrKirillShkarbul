@@ -3,10 +3,10 @@ layout: default
 title: Тексты
 ---
 
-# My Documents
+# Тексты
 
 {% for page in site.pages %}
-  {% if page.path contains 'pages/' %}
+  {% if page.path contains 'ru/' %}
     - [{{ page.title | default: page.name }}]({{ page.url }})
   {% endif %}
 {% endfor %}
