@@ -18,7 +18,7 @@ title: Тексты
     {% assign filename = filename | replace: '.md', '' %}
     {% assign github_edit_url = "https://github.com/eshatohhin/FrKirillShkarbul/edit/master/" | append: page.path %}
     <li>
-      <a href="{{ page.url }}">[{{ filename | default: page.name }}] {{page.title}}</a>
+      <a href=".{{ page.url }}">[{{ filename | default: page.name }}] {{page.title}}</a>
       <a href="{{ github_edit_url }}" target="_blank" style="margin-left:10px; color: red;">✏️</a>
     </li>
   {% endif %}
@@ -35,14 +35,14 @@ title: Тексты
     {% assign filename = filename | replace: '.md', '' %}
     {% assign github_edit_url = "https://github.com/eshatohhin/FrKirillShkarbul/edit/master/" | append: page.path %}
     <li>
-      <a href="{{ page.url }}">[{{ filename | default: page.name }}] {{page.title}}</a>
+      <a href=".{{ page.url }}">[{{ filename | default: page.name }}] {{page.title}}</a>
       <a href="{{ github_edit_url }}" target="_blank" style="margin-left:10px; color: red;">✏️</a>
       {% for page in sorted_pages %}
         {% if page.path contains 'es/' and page.path contains filename %}
           {% assign github_edit_url = "https://github.com/eshatohhin/FrKirillShkarbul/edit/master/" | append: page.path %}
           <ul>
             Spanish: 
-            <a href="{{ page.url }}">{{page.title}}</a>
+            <a href=".{{ page.url }}">{{page.title}}</a>
             <a href="{{ github_edit_url }}" target="_blank" style="margin-left:10px; color: red;">✏️</a>
           </ul>
         {% endif %}
@@ -52,7 +52,7 @@ title: Тексты
           {% assign github_edit_url = "https://github.com/eshatohhin/FrKirillShkarbul/edit/master/" | append: page.path %}
           <ul>
             French: 
-            <a href="{{ page.url }}">{{page.title}}</a>
+            <a href=".{{ page.url }}">{{page.title}}</a>
             <a href="{{ github_edit_url }}" target="_blank" style="margin-left:10px; color: red;">✏️</a>
           </ul>
         {% endif %}
